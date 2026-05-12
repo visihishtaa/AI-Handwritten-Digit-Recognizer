@@ -1,0 +1,4 @@
+*.keras
+*.png
+collected_mistakes/
+__pycache__/

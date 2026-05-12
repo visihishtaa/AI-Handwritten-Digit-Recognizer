@@ -6,7 +6,7 @@ from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 
 # -------------------- SETTINGS --------------------
-MODEL_PATH = "model/mnist_model.keras"
+MODEL_PATH = "mnist_model.keras"
 SAVE_DIR = "collected_mistakes"
 os.makedirs(SAVE_DIR, exist_ok=True)
 

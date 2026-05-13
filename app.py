@@ -7,7 +7,7 @@ from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 
 # -------------------- SETTINGS --------------------
-MODEL_PATH = "model/mnist_model.h5"
+MODEL_PATH = "model/clean_mnist_model.h5"
 if not os.path.exists(MODEL_PATH):
     file_id = "1NR0U8hbNUv9wPvClKdQk_532UFa1GeLP"
     url = f"https://drive.google.com/uc?id={file_id}"

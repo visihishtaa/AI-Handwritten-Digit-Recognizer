@@ -66,7 +66,7 @@ print(f"\n✅ Test Accuracy: {accuracy*100:.2f}%")
 # ---------------- SAVE MODEL ----------------
 os.makedirs("model", exist_ok=True)
 
-model.save("model/mnist_model.keras")
+model.save("model/mnist_model.h5")
 
 print("✅ Model saved successfully!")
 

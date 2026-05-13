@@ -7,7 +7,7 @@ from streamlit_drawable_canvas import st_canvas
 from tensorflow.keras.models import load_model
 
 # -------------------- SETTINGS --------------------
-MODEL_PATH = "model/clean_mnist_model.h5"
+MODEL_PATH = "model/mnist_model.h5"
 if not os.path.exists(MODEL_PATH):
     file_id = "1NR0U8hbNUv9wPvClKdQk_532UFa1GeLP"
     url = f"https://drive.google.com/uc?id={file_id}"
@@ -16,12 +16,11 @@ SAVE_DIR = "collected_mistakes"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
 # -------------------- LOAD MODEL --------------------
+from tensorflow.keras.models import load_model
+
 @st.cache_resource
 def load_digit_model():
-    model = load_model(MODEL_PATH)
-    return model
-
-model = load_digit_model()
+    return load_model(MODEL_PATH, compile=False)
 
 # -------------------- PREPROCESSING --------------------
 def preprocess_and_segment_rgba_image(rgba_image):

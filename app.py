@@ -22,6 +22,8 @@ from tensorflow.keras.models import load_model
 def load_digit_model():
     return load_model(MODEL_PATH, compile=False)
 
+model = load_digit_model()
+
 # -------------------- PREPROCESSING --------------------
 def preprocess_and_segment_rgba_image(rgba_image):
 

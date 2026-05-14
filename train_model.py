@@ -68,7 +68,7 @@ os.makedirs("model", exist_ok=True)
 
 model.save("model/mnist_model.keras")
 
-print("✅ Model saved successfully!")
+print("Model saved successfully!")
 
 # ---------------- PLOT ----------------
 plt.plot(history.history['accuracy'], label='Train Accuracy')

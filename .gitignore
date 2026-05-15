@@ -1,5 +1,3 @@
-*.keras
 *.png
 collected_mistakes/
 __pycache__/
-!model/mnist_model.keras

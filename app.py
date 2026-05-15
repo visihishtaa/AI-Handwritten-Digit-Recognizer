@@ -1,4 +1,5 @@
 import os
+imort gdown
 import cv2
 import numpy as np
 import streamlit as st
@@ -9,6 +10,13 @@ from tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense, Dropou
 
 # -------------------- SETTINGS --------------------
 MODEL_PATH = "model/mnist_model.keras"
+os.makedirs("model", exist_ok=True)
+
+if not os.path.exists(MODEL_PATH):
+    file_id = "1NR0U8hbNUv9wPvClKdQk_532UFa1GeLP"
+    url = f"https://drive.google.com/uc?id={file_id}"
+    gdown.download(url, MODEL_PATH, quiet=False)
+
 SAVE_DIR = "collected_mistakes"
 os.makedirs(SAVE_DIR, exist_ok=True)
 
